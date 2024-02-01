@@ -64,7 +64,7 @@ export default function RemoveGame() {
           placeholder="e.g. Final Fantasy VII: Remake"
         />
         <PlatformList />
-        <input type="submit" value="Remove" className="submit-insert" />
+        <input type="submit" value="Remove Game" className="submit-insert" />
       </form>
     </div>
   );

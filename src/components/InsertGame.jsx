@@ -60,7 +60,7 @@ export default function InsertGame() {
                 <label htmlFor="release-date">Release Date</label>
                 <input id="release-date" type="text" name="rDate" value={inputs.rDate || ""} onChange={handleChange} placeholder="MMM DD, YYYY" />
                 <PlatformList />
-                <input type="submit" value="Submit" className="submit-insert" />
+                <input type="submit" value="Insert Game" className="submit-insert" />
             </form>
         </div>
     );
