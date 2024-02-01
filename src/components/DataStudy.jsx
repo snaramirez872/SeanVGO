@@ -61,8 +61,6 @@ export default function DataStudy() {
         totalGameCount += 1;
     })
 
-    console.log(genres);
-
     // Find Max from Dictionaries After Everything is Parsed
     let maxPlatform = findMaxinDict(platformTotals);
     let maxGenre = findMaxinDict(genres);
@@ -83,8 +81,8 @@ export default function DataStudy() {
                 <div className="genre-list">
                     <h1>List of Genres</h1>
                     <ul className="genre-list">
-                        {Object.entries(genres).map(([key, value]) => (
-                            <li>
+                        {Object.entries(genres).map(([key, value], index) => (
+                            <li key={index}>
                                 <p><i>{key}</i> <b>({value})</b></p>
                             </li>
                         ))}
@@ -93,8 +91,8 @@ export default function DataStudy() {
                 <div className="dev-list">
                     <h1>List of Developers</h1>
                     <ul className="dev-list">
-                        {Object.entries(developers).map(([key, value]) => (
-                            <li>
+                        {Object.entries(developers).map(([key, value], index) => (
+                            <li key={index}>
                                 <p><i>{key}</i> <b>({value})</b></p>
                             </li>
                         ))}
