@@ -1,0 +1,39 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2.5vh;
+    background-color: rgb(0, 6, 83);
+    color: white;
+}
+  
+.logo h1 {
+    cursor: default;
+    margin: 0;
+    font-size: 5vh;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.links {
+    display: flex;
+    list-style: none;
+    margin-right: 2vh;
+    gap: 5vh;
+    font-size: 2.5vh;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    transition: ease-in-out 0.3s;
+}
+
+.links a:hover {
+    color: rgb(83, 255, 198);
+    transition: ease-in-out 0.3s;
+}
+  
