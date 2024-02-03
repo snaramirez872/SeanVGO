@@ -38,12 +38,13 @@
     justify-content: center;
 }
 
-#login-form :is(label, input, .login-btn) {
-    font-size: 2.1vh;
+#login-form :is(label, .login-btn) {
+    font-size: 25px;
 }
 
 #login-form input {
     border-radius: 2vh;
+    font-size: 19px;
 }
 
 #login-form input {
