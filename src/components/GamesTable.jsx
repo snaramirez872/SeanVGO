@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Analysis from "./Analysis.jsx";
 import DataStudy from "./DataStudy.jsx";
 import { GamesList } from "./GamesList.jsx";

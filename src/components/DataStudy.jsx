@@ -98,6 +98,16 @@ export default function DataStudy() {
                         ))}
                     </ul>
                 </div>
+                <div className="platform-list">
+                    <h1>List of Platforms</h1>
+                    <ul className="genre-list">
+                        {Object.entries(platformTotals).map(([key, value], index) => (
+                            <li key={index}>
+                                <p><i>{key}</i> <b>({value})</b></p>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </div>
     );

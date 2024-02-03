@@ -1,0 +1,77 @@
+.games-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.games-container :is(*) {
+    transition: ease-in-out 0.3s;
+}
+
+.data-study-btn {
+    text-align: center;
+    margin-top: 5vh;
+    padding: 1vh 0;
+    width: 20vh;
+    font-size: 2.5vh;
+    border-radius: 1vh;
+    border: 0.5px solid var(--color-Three);
+    background-color: var(--color-Three);
+}
+
+.data-study-btn:hover {
+    cursor: pointer;
+    border-radius: 4vh;
+    width: 15vh;
+    color: white;
+}
+
+.games-table {
+    margin: 8vh 0;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.games-table td {
+    padding: 2vh 3vh;
+    border: 1px solid black;
+}
+
+.games-table thead tr td {
+    text-align: center;
+    font-size: 25px;
+    background-color: var(--color-One);
+    border: 1px solid var(--color-One);
+}
+
+.games-table tbody tr td {
+    font-size: 20px;
+}
+
+.games-table tbody tr:nth-child(odd) {
+    background-color: rgb(184, 184, 184);
+}
+
+.games-table tbody tr:nth-child(even) {
+    background-color: rgb(141, 141, 141);
+}
+
+.pagination {
+    display: flex;
+    gap: 1.5vh;
+}
+
+.pagination button {
+    padding: 1vh 0;
+    width: 3vh;
+    font-size: 2vh;
+    border-radius: 1vh;
+    border: 0.5px solid var(--color-Three);
+    background-color: var(--color-Three);
+}
+
+.pagination button:hover {
+    color: white;
+    border-radius: 2vh;
+}
