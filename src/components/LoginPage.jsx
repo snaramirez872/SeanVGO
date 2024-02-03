@@ -39,15 +39,17 @@ export default function LoginPage() {
     
     return (
         <div className="login-container">
-            <h2>Login</h2>
             <form id="login-form">
+                <h1>Login</h1>
                 <label htmlFor="email">Email</label>
                 <input id="email" type="email" value={email} onChange={onChangeEmail} />
                 <label htmlFor="password">Password</label>
                 <input id="password" type="password" value={password} onChange={onChangePass} />
-                <button className="login-btn" type="button" onClick={handleLogin}>
-                    Login
-                </button>
+                <div className="button">
+                    <button className="login-btn" type="button" onClick={handleLogin}>
+                        Login
+                    </button>
+                </div>
             </form>
         </div>
     );

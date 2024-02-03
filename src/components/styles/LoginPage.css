@@ -1,0 +1,80 @@
+.login-container,
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container {
+    align-items: center;
+    justify-content: center;
+}
+
+#login-form {
+    margin-top: 15vh;
+    gap: 1.5vh;
+    width: 35%;
+    padding: 8vh 10vh;
+    border-radius: 2vh;
+    background-color: rgba(255, 255, 255, 0.7)
+}
+
+#login-form :is(*) {
+    transition: ease-in-out 0.3s;
+}
+
+#login-form h1 {
+    font-size: 6vh;
+    text-align: center;
+}
+
+#login-form label {
+    text-align: left;
+    margin-top: 2vh;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-btn {
+    margin-top: 4vh;
+    width: 75%;
+}
+
+#login-form :is(label, input, .login-btn) {
+    font-size: 2.1vh;
+}
+
+#login-form input {
+    border-radius: 2vh;
+}
+
+#login-form input {
+    border: 2.5px solid black;
+    padding: 0.2vh 1vh;
+}
+
+#login-form input:focus {
+    outline: none;
+    border: 2.5px solid rgb(47, 113, 255);
+}
+
+#login-form :is(label, h1) {
+    color: black;
+}
+
+#login-form button {
+    padding: 0.5vh;
+    border-radius: 1vh;
+    border: 0.5px solid var(--color-Three);
+    background-color: var(--color-Three);
+}
+
+#login-form button:hover {
+    cursor: pointer;
+    border-radius: 4vh;
+    color: white;
+    background-color: var(--color-Three);
+}

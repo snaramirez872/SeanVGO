@@ -5,6 +5,8 @@
     --color-One: rgb(255, 203, 106);
     --color-Two: rgb(255, 158, 68);
     --color-Three: rgb(255, 85, 0);
+
+    --background-color: rgb(44, 44, 44);
 }
 
 .nav-bar {
@@ -15,8 +17,8 @@
     padding: 2.5vh;
     background: linear-gradient(
         90deg, 
-        rgb(0, 0, 0) 0%,
-        rgb(58, 58, 58) 86% 
+        var(--background-color) 15%,
+        rgb(0, 0, 0) 76% 
     );
     color: white;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -60,23 +62,22 @@
 
 .links a:hover {
     cursor: pointer;
-    color: var(--color-Three);
+    color: var(--color-Two);
     transition: ease-in-out 0.3s;
 }
 
  .links a p {
-    padding: 0.5vh 1.5vh;
+    padding: 0.5vh 2vh;
  }
 
 .log-btns {
-    background-color: var(--color-One);
+    background-color: var(--color-Three);
     color: black;
     border-radius: 1vh;
     transition: ease-in-out 0.3s;
 }
 
 .log-btns:hover {
-    background-color: var(--color-Two);
     border-radius: 5vh;
     color: white;
     transition: ease-in-out 0.3s;
