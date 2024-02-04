@@ -1,0 +1,60 @@
+.data-study {
+    margin-top: 5vh;
+    padding: 1vh;
+}
+
+.data-study p {
+    font-size: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;
+}
+
+.info p span {
+    font-size: 2.5vh;
+    color: var(--color-One);
+    font-weight: 600;
+}
+
+.list-containers {
+    display: flex;
+    gap: 7vh;
+    margin-top: 5vh;
+}
+
+.list-containers div h1 {
+    text-align: center;;
+}
+
+.list-containers div :is(ul) {
+    overflow-y: scroll;
+    list-style: none;
+    text-align: center;;
+    padding: 0.5vh 3vh;
+    width: 35vh;
+    max-height: 16vh;
+    overflow: auto;
+    scrollbar-width: 7px; /* for Firefox */
+    scrollbar-color: rgb(95, 95, 95) var(--background-color); /* for Firefox */
+}
+
+ /* Scrollbars for Chrome/Safari */
+.list-containers div ul::-webkit-scrollbar {
+    width: 7px;
+}
+.list-containers div ul::-webkit-scrollbar-thumb {
+    background-color: rgb(95, 95, 95);
+    border-radius: 5vh;
+}
+.list-containers div ul::-webkit-scrollbar-track {
+    background-color: var(--background-color);
+}
+
+.list-containers div :is(ul li) {
+    margin-top: 0.5vh;
+}

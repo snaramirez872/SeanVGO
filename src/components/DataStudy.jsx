@@ -73,10 +73,12 @@ export default function DataStudy() {
     // Actual Component Rendering
     return (
         <div className="data-study">
-            <p><b>Total Games: </b><span>{totalGameCount}</span></p>
-            <p><b>Most Owned Platform: </b><span>{maxPlatform[0]}</span> with <span>{platformRatio}%</span> of total games.</p>
-            <p><b>Most Owned Genre: </b><span>{maxGenre[0]}</span> with <span>{genreRatio}%</span> of total games.</p>
-            <p><span>{maxDeveloper[0]}</span> is listed the most out of any other developer at <span>{maxDeveloper[1]}</span> games.</p>
+            <div className="info">
+                <p>You have <span>{totalGameCount}</span> total games.</p>
+                <p><span>{maxPlatform[0]}</span> titles account for <span>{platformRatio}%</span> of total games.</p>
+                <p><span>{maxGenre[0]}</span> titles account for <span>{genreRatio}%</span> of total games.</p>
+                <p>You own <span>{maxDeveloper[1]}</span> games from <span>{maxDeveloper[0]}</span>.</p>
+            </div>
             <div className="list-containers">
                 <div className="genre-list">
                     <h1>List of Genres</h1>

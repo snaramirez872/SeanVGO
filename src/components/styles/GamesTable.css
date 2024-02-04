@@ -60,6 +60,7 @@
 .pagination {
     display: flex;
     gap: 1.5vh;
+    margin-bottom: 7vh;
 }
 
 .pagination button {
@@ -72,6 +73,7 @@
 }
 
 .pagination button:hover {
+    cursor: pointer;
     color: white;
     border-radius: 2vh;
 }
