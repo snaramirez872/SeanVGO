@@ -1,0 +1,9 @@
+#platforms {
+    font-size: 19px;
+    width: 30vh;
+}
+
+#platforms:focus {
+    outline: none;
+    border: 2.5px solid rgb(47, 113, 255);
+}

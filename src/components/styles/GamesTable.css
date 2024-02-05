@@ -28,7 +28,8 @@
 }
 
 .games-table {
-    margin: 8vh 0;
+    margin: 3vh 0;
+    width: 170vh;
     border-collapse: collapse;
     border: 1px solid black;
 }

@@ -49,7 +49,7 @@ export default function InsertGame() {
 
     return (
         <div className="form-container">
-            <form className="insert-game" onSubmit={handleNewGame}>
+            <form className="insert-game">
                 <h1>Insert Game</h1>
                 <label htmlFor="game-title">Title</label>
                 <input id="game-title" type="text" name="title" value={inputs.title || ""} onChange={handleChange} placeholder="e.g. Final Fantasy VII: Remake" />
@@ -59,8 +59,14 @@ export default function InsertGame() {
                 <input id="game-dev" type="text" name="dev" value={inputs.dev || ""} onChange={handleChange} placeholder="e.g. Square Enix" />
                 <label htmlFor="release-date">Release Date</label>
                 <input id="release-date" type="text" name="rDate" value={inputs.rDate || ""} onChange={handleChange} placeholder="MMM DD, YYYY" />
-                <PlatformList />
-                <input type="submit" value="Insert Game" className="submit-insert" />
+                <div className="platform-list">
+                    <PlatformList />
+                </div>
+                <div className="button">
+                    <button className="insert-btn" type="button" onClick={handleNewGame}>
+                        Insert Game
+                    </button>
+                </div>
             </form>
         </div>
     );

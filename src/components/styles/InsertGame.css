@@ -1,0 +1,67 @@
+.form-container,
+.insert-game,
+.platform-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    align-items: center;
+    justify-content: center;
+}
+
+.insert-game {
+    margin-top: 5vh;
+    gap: 1.5vh;
+    width: 70vh;
+    padding: 8vh;
+    border-radius: 2vh;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.insert-game :is(*) {
+    transition: ease-in-out 0.3s;
+}
+
+.insert-game h1 {
+    font-size: 6vh;
+    text-align: center;
+}
+
+.insert-game :is(label, .insert-btn) {
+    font-size: 25px;
+}
+
+.insert-game input {
+    border-radius: 2vh;
+    font-size: 19px;
+    border: 2.5px solid black;
+    padding: 0.2vh 1vh;
+}
+
+.insert-game input:focus {
+    outline: none;
+    border: 2.5px solid rgb(47, 113, 255);
+}
+
+.insert-game button {
+    text-align: center;
+    padding: 1vh 0;
+    margin-top: 4vh;
+    width: 25vh;
+    border-radius: 1vh;
+    border: 0.5px solid var(--color-Three);
+    background-color: var(--color-Three);
+}
+
+.insert-game button:hover {
+    cursor: pointer;
+    border-radius: 4vh;
+    width: 20vh;
+    color: white;
+}
+
+.platform-list {
+    align-items: center;
+    justify-content: center;
+}
