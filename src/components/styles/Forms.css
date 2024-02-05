@@ -1,5 +1,6 @@
 .form-container,
 .insert-game,
+.remove-game,
 .platform-list {
     display: flex;
     flex-direction: column;
@@ -19,32 +20,38 @@
     background-color: rgba(255, 255, 255, 0.7);
 }
 
-.insert-game :is(*) {
+.form-container :is(*) {
     transition: ease-in-out 0.3s;
 }
 
-.insert-game h1 {
+.insert-game h1,
+.remove-game h1 {
     font-size: 6vh;
     text-align: center;
 }
 
-.insert-game :is(label, .insert-btn) {
+.insert-game :is(label, .insert-btn),
+.remove-game :is(label, .remove-btn) {
     font-size: 25px;
 }
 
-.insert-game input {
-    border-radius: 2vh;
+.insert-game input,
+.remove-game input {
+    border-radius: 1vh;
     font-size: 19px;
     border: 2.5px solid black;
     padding: 0.2vh 1vh;
 }
 
-.insert-game input:focus {
+.insert-game input:focus,
+.remove-game input:focus {
+    border-radius: 2vh;
     outline: none;
     border: 2.5px solid rgb(47, 113, 255);
 }
 
-.insert-game button {
+.insert-game button,
+.remove-game button {
     text-align: center;
     padding: 1vh 0;
     margin-top: 4vh;
@@ -54,7 +61,8 @@
     background-color: var(--color-Three);
 }
 
-.insert-game button:hover {
+.insert-game button:hover,
+.remove-game button:hover {
     cursor: pointer;
     border-radius: 4vh;
     width: 20vh;
@@ -64,4 +72,17 @@
 .platform-list {
     align-items: center;
     justify-content: center;
+}
+
+.remove-game {
+    margin-top: 5vh;
+    gap: 1.5vh;
+    width: 70vh;
+    padding: 8vh;
+    border-radius: 2vh;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.remove-game label {
+    margin-top: 4vh;
 }

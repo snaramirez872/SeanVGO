@@ -43,13 +43,14 @@
 }
 
 #login-form input {
-    border-radius: 2vh;
+    border-radius: 1vh;
     font-size: 19px;
     border: 2.5px solid black;
     padding: 0.2vh 1vh;
 }
 
 #login-form input:focus {
+    border-radius: 2vh;
     outline: none;
     border: 2.5px solid rgb(47, 113, 255);
 }

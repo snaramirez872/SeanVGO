@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import db from "../firebase.js";
 import PlatformList from "./dropdowns/PlatformList.jsx";
-import "./styles/InsertGame.css";
+import "./styles/Forms.css";
 
 export default function InsertGame() {
     // Form Variables + Utility
@@ -52,18 +52,50 @@ export default function InsertGame() {
             <form className="insert-game">
                 <h1>Insert Game</h1>
                 <label htmlFor="game-title">Title</label>
-                <input id="game-title" type="text" name="title" value={inputs.title || ""} onChange={handleChange} placeholder="e.g. Final Fantasy VII: Remake" />
+                <input 
+                    id="game-title" 
+                    type="text" 
+                    name="title" 
+                    value={inputs.title || ""} 
+                    onChange={handleChange} 
+                    placeholder="e.g. Final Fantasy VII: Remake" 
+                />
                 <label htmlFor="game-genre">Genre</label>
-                <input id="game-genre" type="text" name="genre" value={inputs.genre || ""} onChange={handleChange} placeholder="e.g. Role-playing (RPG)" />
+                <input 
+                    id="game-genre" 
+                    type="text" 
+                    name="genre" 
+                    value={inputs.genre || ""} 
+                    onChange={handleChange} 
+                    placeholder="e.g. Role-playing (RPG)" 
+                />
                 <label htmlFor="game-dev">Developer</label>
-                <input id="game-dev" type="text" name="dev" value={inputs.dev || ""} onChange={handleChange} placeholder="e.g. Square Enix" />
+                <input 
+                    id="game-dev" 
+                    type="text" 
+                    name="dev" 
+                    value={inputs.dev || ""} 
+                    onChange={handleChange} 
+                    placeholder="e.g. Square Enix" 
+                />
                 <label htmlFor="release-date">Release Date</label>
-                <input id="release-date" type="text" name="rDate" value={inputs.rDate || ""} onChange={handleChange} placeholder="MMM DD, YYYY" />
+                <input 
+                    id="release-date" 
+                    type="text" 
+                    name="rDate" 
+                    value={inputs.rDate || ""} 
+                    onChange={handleChange} 
+                    placeholder="MMM DD, YYYY" 
+                />
                 <div className="platform-list">
                     <PlatformList />
                 </div>
                 <div className="button">
-                    <button className="insert-btn" type="button" onClick={handleNewGame}>
+                    <button 
+                        className="insert-btn" 
+                        type="button" 
+                        onClick={handleNewGame}
+                    >
                         Insert Game
                     </button>
                 </div>

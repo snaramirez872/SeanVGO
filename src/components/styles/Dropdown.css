@@ -1,9 +1,13 @@
 #platforms {
     font-size: 19px;
+    border-radius: 1vh;
     width: 30vh;
+    transition: ease-in-out 0.3s;
 }
 
 #platforms:focus {
     outline: none;
+    border-radius: 2vh;
     border: 2.5px solid rgb(47, 113, 255);
+    transition: ease-in-out 0.3s;
 }
