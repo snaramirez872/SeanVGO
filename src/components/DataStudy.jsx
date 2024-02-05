@@ -40,13 +40,15 @@ export default function DataStudy() {
         }
     }
 
-    function genreHandling(key, dict) {
+    function genreDevHandling(key, dict) {
         if (key.includes(',')) {
-            // If game has multiple genres
+            // If game has multiple genres or developers
             var multi = key.split(',').map(item => item.trim());
             for (var i of multi) {
                 addToOrIncrementDict(i, dict);
             }
+        } else {
+            addToOrIncrementDict(key, dict);
         }
     }
 
@@ -54,9 +56,9 @@ export default function DataStudy() {
         // Platforms
         addToOrIncrementDict(game.platform, platformTotals);
         // Genres
-        genreHandling(game.genre, genres);
+        genreDevHandling(game.genre, genres);
         // Developers
-        addToOrIncrementDict(game.developer, developers);
+        genreDevHandling(game.developer, developers);
         // Incrementing Total Game Count for Every Document Accessed
         totalGameCount += 1;
     })

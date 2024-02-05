@@ -10,7 +10,13 @@ export default function PlatformList() {
             <select id="platforms" value={platform} onChange={(e) => setPlatform(e.target.value)}>
                 <option defaultValue="">Choose...</option>
                 <option value="Playstation 2">PlayStation 2</option>
+                <option value="Playstation 3">PlayStation 3</option>
                 <option value="Playstation 4">PlayStation 4</option>
+                <option value="Xbox 360">Xbox 360</option>
+                <option value="Xbox One">Xbox One</option>
+                <option value="Xbox Series X|S">Xbox Series X|S</option>
+                <option value="Gameboy Color">Game Boy Color</option>
+                <option value="Gameboy Advanced">Game Boy Advanced</option>
                 <option value="Nintendo DS">Nintendo DS</option>
                 <option value="Nintendo 3DS">Nintendo 3DS</option>
                 <option value="Nintendo Switch">Nintendo Switch</option>
