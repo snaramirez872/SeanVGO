@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { userAuth } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useUserContext } from "./UserContext";
 import "./styles/LoginPage.css";
 
 export default function LoginPage() {
+    const { setUserEmail } = useUserContext();
     // Login Logic
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -23,6 +25,8 @@ export default function LoginPage() {
             await signInWithEmailAndPassword(userAuth, email, password);
             const userEmail = document.getElementById("email").value;
 
+            setUserEmail(userEmail);
+            
             if (userEmail === import.meta.env.VITE_adminUser) {
                 // If user is the admin
                 console.log("Welcome, Admin!");

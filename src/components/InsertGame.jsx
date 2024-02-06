@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
+import { useUserContext } from "./UserContext.jsx";
 import db from "../firebase.js";
 import PlatformList from "./dropdowns/PlatformList.jsx";
 import "./styles/Forms.css";
 
 export default function InsertGame() {
+    // Getting user email
+    const { userEmail } = useUserContext();
+
     // Form Variables + Utility
     const [inputs, setInputs] = useState({});
 
@@ -25,7 +29,12 @@ export default function InsertGame() {
         const userPlatform = document.getElementById("platforms").value;
     
         // Adding to Collection
-        const collRef = collection(db, "games-list");
+        let collRef;
+        if (userEmail === import.meta.env.VITE_adminUser) {
+            collRef = collection(db, "games-list");
+        } else if (userEmail === "test.user@email.xyz") {
+            collRef = collection(db, "user-game-list");
+        }
         
         const load = {
             title: userTitle,

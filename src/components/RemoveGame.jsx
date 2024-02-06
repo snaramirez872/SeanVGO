@@ -9,9 +9,12 @@ import {
 } from "firebase/firestore";
 import db from "../firebase.js"
 import PlatformList from "./dropdowns/PlatformList.jsx";
+import { useUserContext } from "./UserContext.jsx";
 import "./styles/Forms.css";
 
 export default function RemoveGame() {
+    // Getting the user's email
+    const { userEmail } = useUserContext();
     const [inputs, setInputs] = useState({});
 
     const handleChange = (e) => {
@@ -28,20 +31,31 @@ export default function RemoveGame() {
         const userTitle = document.getElementById("game-title").value;
         const userPlat = document.getElementById("platforms").value;
 
-        const collRef = collection(db, "games-list");
+        // Firebase Query
+        let collRef;
+        if (userEmail === import.meta.env.VITE_adminUser) {
+            collRef = collection(db, "games-list");
+        } else if (userEmail === "test.user@email.xyz") {
+            collRef = collection(db, "user-game-list");
+        }
+
         const q = query(
             collRef, 
             where("title", "==", userTitle), 
             where("platform", "==", userPlat)
         );
 
-        // Firebase Query
         try {
             const snap = await getDocs(q);
             const res = snap.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
 
             res.forEach(async (re) => {
-                const docRef = doc(db, "games-list", re.id);
+                let docRef;
+                if (userEmail === import.meta.env.VITE_adminUser) {
+                    docRef = doc(db, "games-list", re.id);
+                } else if (userEmail === "test.user@email.xyz") {
+                    docRef = doc(db, "user-game-list", re.id);
+                }
                 await deleteDoc(docRef);
             });
             
