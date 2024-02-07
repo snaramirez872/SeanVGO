@@ -95,6 +95,17 @@ export default function RemoveGame() {
                     </button>
                 </div>
             </form>
+            <div className="directions">
+                <div className="direct-info">
+                    <h1>Please Read Before Using Form</h1>
+                    <p>Removal is functional but not optimized. Please make sure that the title you input exactly matches the title in the database that you wish to remove.</p>
+                    <ul>
+                        <li>Case Sensitive</li>
+                        <li>Digits in the right places (if applicable)</li>
+                        <li>Colons and Symbols in the right places (if applicable)</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     );
 }

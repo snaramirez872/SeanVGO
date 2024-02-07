@@ -17,13 +17,37 @@
     font-size: 2.5vh;
     border-radius: 1vh;
     border: 0.5px solid var(--color-Three);
-    background-color: var(--color-Three);
+    background: linear-gradient(
+        90deg, 
+        var(--color-Two) 20%, 
+        var(--color-Three) 71%
+    );
 }
 
 .data-study-btn:hover {
     cursor: pointer;
     border-radius: 4vh;
     width: 15vh;
+    color: white;
+    background: linear-gradient(
+        90deg, 
+        var(--color-Three) 20%, 
+        var(--color-Two) 71%
+    );
+}
+
+.data-study-btn.active {
+    border-radius: 4vh;
+    width: 15vh;
+    box-shadow: 
+        0 0 10px #ff9900, 
+        0 0 20px #f700ff, 
+        0 0 30px #ff00dd;
+    background: linear-gradient(
+        90deg, 
+        var(--color-Three) 20%, 
+        var(--color-Two) 71%
+    );
     color: white;
 }
 
@@ -64,7 +88,7 @@
     margin-bottom: 7vh;
 }
 
-.pagination button {
+.pagination .pagination-btn {
     padding: 1vh 0;
     width: 3vh;
     font-size: 2vh;
@@ -73,7 +97,7 @@
     background-color: var(--color-Three);
 }
 
-.pagination button:hover {
+.pagination .pagination-btn:hover {
     cursor: pointer;
     color: white;
     border-radius: 2vh;

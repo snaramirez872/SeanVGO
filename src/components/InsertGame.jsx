@@ -109,6 +109,22 @@ export default function InsertGame() {
                     </button>
                 </div>
             </form>
+            <div className="directions">
+                <div className="direct-info">
+                    <h1>Please Read Before Using Form</h1>
+                    <ul>
+                        <li>
+                            <b><u>Multiple Genres</u>:</b> Please separate by a comma and a space.
+                        </li>
+                        <li>
+                            <b><u>Multiple Developers</u>:</b> Please separate by a comma and a space.
+                        </li>
+                        <li>
+                            <b><u>For Date</u>:</b> Examples of MMM DD, YYYY == "Feb 07, 2024", "Jan 12, 2021"
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     );
 }

@@ -1,4 +1,3 @@
-.form-container,
 .insert-game,
 .remove-game,
 .platform-list {
@@ -7,8 +6,10 @@
 }
 
 .form-container {
+    display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5vh;
 }
 
 .insert-game {
@@ -85,4 +86,23 @@
 
 .remove-game label {
     margin-top: 4vh;
+}
+
+.directions {
+    width: 70vh;
+    color: white;
+}
+
+.directions p {
+    margin-top: 2vh;
+    width: 52vh;
+}
+
+.directions ul {
+    margin-left: 4vh;
+    margin-top: 2vh;
+}
+
+.directions ul li {
+    margin-top: 1vh;
 }

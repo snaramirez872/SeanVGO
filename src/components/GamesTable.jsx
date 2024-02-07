@@ -35,7 +35,7 @@ export default function GamesTable() {
     // Component Render
     return (
         <div className="games-container">
-            <button className="data-study-btn" onClick={openAnalysis}>Analytics</button>
+            <button className={isAnalysis ? "data-study-btn active" : "data-study-btn"} onClick={openAnalysis}>Analytics</button>
 
             {isAnalysis && (
                 <Analysis onClose={closeAnalysis}>
@@ -69,7 +69,7 @@ export default function GamesTable() {
             {/* Pagination */}
             <div className="pagination">
                 {Array.from({ length: Math.ceil(games.length / itemsPerPage) }, (_, index) => (
-                    <button key={index + 1} onClick={() => handlePageChange(index + 1)}>
+                    <button className="pagination-btn" key={index + 1} onClick={() => handlePageChange(index + 1)}>
                         {index + 1}
                     </button>
                 ))}
