@@ -3,3 +3,21 @@
     margin: 0;
     padding: 0;
 }
+
+.mobile-content {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .content {
+        display: none;
+    }
+
+    .mobile-content {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}

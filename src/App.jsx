@@ -7,6 +7,7 @@ import GamesTable from './components/GamesTable.jsx';
 import InsertGame from './components/InsertGame.jsx';
 import RemoveGame from './components/RemoveGame.jsx';
 import LoginPage from './components/LoginPage.jsx';
+import MobileView from './components/Mobile-View/MobileView.jsx';
 import './App.css';
 
 const PrivateRoute = ({ element: Element, logCheck }) => {
@@ -28,27 +29,32 @@ export default function App() {
   }, []);
 
   return (
-    <Router>
-      <div className="App">
-        <NavBar />
-        <div className="content">
-          <Routes>
-            <Route path="/login" element={<LoginPage />} />
-            <Route
-              path="/remove-game"
-              element={<PrivateRoute element={RemoveGame} logCheck={isLogged} />}
-            />
-            <Route
-              path="/insert-game"
-              element={<PrivateRoute element={InsertGame} logCheck={isLogged} />}
-            />
-            <Route
-              path="/"
-              element={<PrivateRoute element={GamesTable} logCheck={isLogged} />}
-            />
-          </Routes>
+    <>
+      <Router>
+        <div className="App">
+          <NavBar />
+          <div className="content">
+            <Routes>
+              <Route path="/login" element={<LoginPage />} />
+              <Route
+                path="/remove-game"
+                element={<PrivateRoute element={RemoveGame} logCheck={isLogged} />}
+              />
+              <Route
+                path="/insert-game"
+                element={<PrivateRoute element={InsertGame} logCheck={isLogged} />}
+              />
+              <Route
+                path="/"
+                element={<PrivateRoute element={GamesTable} logCheck={isLogged} />}
+              />
+            </Routes>
+          </div>
         </div>
+      </Router>
+      <div className="mobile-content">
+        <MobileView />
       </div>
-    </Router>
+    </>
   );
 }

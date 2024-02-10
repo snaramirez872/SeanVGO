@@ -1,0 +1,13 @@
+.mobile-content {
+    text-align: center;
+    color: white;
+}
+
+.mobile-content h2 {
+    margin-top: 7vh;
+}
+
+.mobile-content img {
+    margin-top: 7vh;
+    width: 40vh;
+}
