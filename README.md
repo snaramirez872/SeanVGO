@@ -10,6 +10,8 @@ This codebase was made with:
 Successfully launched on 2/10/2024\
 [Live Link](https://seanvgo-f931c.web.app/login)
 
+Supplmentary Data Visualizer: [Live Link](https://seanvgo-data-visualizer.web.app) | [GitHub Repo](https://github.com/snaramirez872/SeanVGO-Data-Visualizer)
+
 This service was purely made for my own personal use and as such only supports two users: Myself and a Demo User
 
 Please email me [here](mailto:snaramirez872@gmail.com) for the Demo User credentials.
